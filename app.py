@@ -217,7 +217,7 @@ if uploaded_file is not None:
             """
 
             response = model.generate_content(
-                [prompt]
+                [prompt, image]
             )
 
             resultado = response.text
