@@ -7,9 +7,7 @@ import pandas as pd
 from io import BytesIO
 import os
 
-genai.configure(
-    api_key=os.getenv("GEMINI_API_KEY")
-)
+
 
 # =========================
 # CONFIGURACION PAGINA
@@ -39,8 +37,12 @@ cursor = conexion.cursor()
 # API GEMINI
 # =========================
 
+#genai.configure(
+#    api_key=os.getenv("GEMINI_API_KEY")
+#)
+
 genai.configure(
-    api_key="AIzaSyApKQofNhyf8nRKPT1D3rfruQR_oaeYrbs"
+    api_key=st.secrets["GEMINI_API_KEY"]
 )
 
 model = genai.GenerativeModel(
