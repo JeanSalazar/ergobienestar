@@ -26,14 +26,6 @@ st.set_page_config(
 # =========================
 
 conexion = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="postura_ia"
-)
-
-qDEahzbD4p2IUBCH
-conexion = mysql.connector.connect(
     host=os.getenv("DB_HOST"),
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
